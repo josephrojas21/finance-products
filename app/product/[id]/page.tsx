@@ -3,7 +3,6 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import styled from 'styled-components';
-import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { getProductById } from '../../data/products';
@@ -263,98 +262,89 @@ export default function ProductDetail() {
           &larr; Volver al catálogo
         </BackButton>
         
-        <ProductContainer>
-          <ProductImageContainer>
-            {product.image ? (
-              <Image 
-                src={product.image} 
-                alt={product.name} 
-                fill 
-                sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
-                priority
-              />
-            ) : (
+        {product && (
+          <ProductContainer>
+            <ProductImageContainer>
               <PlaceholderImage>
                 {product.type}
               </PlaceholderImage>
-            )}
-          </ProductImageContainer>
-          
-          <ProductInfo>
-            <ProductHeader>
-              <ProductTitle>{product.name}</ProductTitle>
-              <ProductType>{product.type}</ProductType>
-            </ProductHeader>
+            </ProductImageContainer>
             
-            <Description>{product.description}</Description>
-            
-            <InfoSection>
-              <SectionTitle>Detalles del Producto</SectionTitle>
-              <DetailsList>
-                <DetailItem>
-                  <DetailLabel>Categoría</DetailLabel>
-                  <DetailValue>{product.category}</DetailValue>
-                </DetailItem>
-                
-                {product.interestRate !== null && (
-                  <DetailItem>
-                    <DetailLabel>Tasa de Interés</DetailLabel>
-                    <DetailValue>{product.interestRate}%</DetailValue>
-                  </DetailItem>
-                )}
-                
-                <DetailItem>
-                  <DetailLabel>Monto Mínimo</DetailLabel>
-                  <DetailValue>${product.minAmount.toLocaleString('es-MX')}</DetailValue>
-                </DetailItem>
-                
-                {product.maxAmount && (
-                  <DetailItem>
-                    <DetailLabel>Monto Máximo</DetailLabel>
-                    <DetailValue>${product.maxAmount.toLocaleString('es-MX')}</DetailValue>
-                  </DetailItem>
-                )}
-                
-                <DetailItem>
-                  <DetailLabel>Plazo</DetailLabel>
-                  <DetailValue>{product.term}</DetailValue>
-                </DetailItem>
-              </DetailsList>
+            <ProductInfo>
+              <ProductHeader>
+                <ProductTitle>{product.name}</ProductTitle>
+                <ProductType>{product.type}</ProductType>
+              </ProductHeader>
               
-              <RiskContainer>
-                <RiskLabel>Nivel de Riesgo</RiskLabel>
-                <RiskBar>
-                  <RiskIndicator level={product.riskLevel} />
-                </RiskBar>
-                <RiskDescription level={product.riskLevel}>
-                  <span>Bajo</span>
-                  <span>Medio</span>
-                  <span>Alto</span>
-                  <span>{product.riskLevel}</span>
-                </RiskDescription>
-              </RiskContainer>
-            </InfoSection>
-            
-            <InfoSection>
-              <SectionTitle>Beneficios</SectionTitle>
-              <ListContainer>
-                {product.benefits.map((benefit, index) => (
-                  <ListItem key={index}>{benefit}</ListItem>
-                ))}
-              </ListContainer>
-            </InfoSection>
-            
-            <InfoSection>
-              <SectionTitle>Requisitos</SectionTitle>
-              <ListContainer>
-                {product.requirements.map((requirement, index) => (
-                  <ListItem key={index}>{requirement}</ListItem>
-                ))}
-              </ListContainer>
-            </InfoSection>
-          </ProductInfo>
-        </ProductContainer>
+              <Description>{product.description}</Description>
+              
+              <InfoSection>
+                <SectionTitle>Detalles del Producto</SectionTitle>
+                <DetailsList>
+                  <DetailItem>
+                    <DetailLabel>Categoría</DetailLabel>
+                    <DetailValue>{product.category}</DetailValue>
+                  </DetailItem>
+                  
+                  {product.interestRate !== null && (
+                    <DetailItem>
+                      <DetailLabel>Tasa de Interés</DetailLabel>
+                      <DetailValue>{product.interestRate}%</DetailValue>
+                    </DetailItem>
+                  )}
+                  
+                  <DetailItem>
+                    <DetailLabel>Monto Mínimo</DetailLabel>
+                    <DetailValue>${product.minAmount.toLocaleString('es-MX')}</DetailValue>
+                  </DetailItem>
+                  
+                  {product.maxAmount && (
+                    <DetailItem>
+                      <DetailLabel>Monto Máximo</DetailLabel>
+                      <DetailValue>${product.maxAmount.toLocaleString('es-MX')}</DetailValue>
+                    </DetailItem>
+                  )}
+                  
+                  <DetailItem>
+                    <DetailLabel>Plazo</DetailLabel>
+                    <DetailValue>{product.term}</DetailValue>
+                  </DetailItem>
+                </DetailsList>
+                
+                <RiskContainer>
+                  <RiskLabel>Nivel de Riesgo</RiskLabel>
+                  <RiskBar>
+                    <RiskIndicator level={product.riskLevel} />
+                  </RiskBar>
+                  <RiskDescription level={product.riskLevel}>
+                    <span>Bajo</span>
+                    <span>Medio</span>
+                    <span>Alto</span>
+                    <span>{product.riskLevel}</span>
+                  </RiskDescription>
+                </RiskContainer>
+              </InfoSection>
+              
+              <InfoSection>
+                <SectionTitle>Beneficios</SectionTitle>
+                <ListContainer>
+                  {product.benefits.map((benefit, index) => (
+                    <ListItem key={index}>{benefit}</ListItem>
+                  ))}
+                </ListContainer>
+              </InfoSection>
+              
+              <InfoSection>
+                <SectionTitle>Requisitos</SectionTitle>
+                <ListContainer>
+                  {product.requirements.map((requirement, index) => (
+                    <ListItem key={index}>{requirement}</ListItem>
+                  ))}
+                </ListContainer>
+              </InfoSection>
+            </ProductInfo>
+          </ProductContainer>
+        )}
       </Main>
       <Footer />
     </PageContainer>

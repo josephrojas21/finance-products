@@ -3,7 +3,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Product } from '../types/product';
 import { Theme } from '../utils/styled';
 
@@ -148,19 +147,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className }) 
   return (
     <Card className={className}>
       <ImageContainer>
-        {product.image ? (
-          <Image 
-            src={product.image} 
-            alt={product.name} 
-            fill 
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            style={{ objectFit: 'cover' }}
-          />
-        ) : (
-          <PlaceholderImage>
-            {product.type}
-          </PlaceholderImage>
-        )}
+        <PlaceholderImage>
+          {product.type}
+        </PlaceholderImage>
       </ImageContainer>
       
       <CardContent>
