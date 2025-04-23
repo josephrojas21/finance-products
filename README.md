@@ -4,7 +4,7 @@ This project is a landing page for a fictional fintech company that showcases a 
 
 ## 🚀 Demo
 
-You can see the deployed version of this project on [Vercel](https://your-vercel-deployment-link).
+You can see the deployed version of this project on [Vercel](https://finance-products-dd2c7qpmc-joseph-rojas-montoyas-projects.vercel.app/).
 
 ## 📋 Features
 
