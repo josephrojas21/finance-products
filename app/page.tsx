@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductCard from './components/ProductCard';
 import CategoryFilter from './components/CategoryFilter';
+import HeroBackground from './components/HeroBackground';
 import { products, getCategories } from './data/products';
 
 const PageContainer = styled.div`
@@ -27,35 +28,60 @@ const Main = styled.main`
 `;
 
 const HeroSection = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   margin-bottom: 3rem;
-  padding: 2rem 0;
+  padding: 7rem 0;
+  color: white;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    padding: 4rem 0;
+    padding: 9rem 0;
+    min-height: 600px;
   }
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+  width: 100%;
 `;
 
 const HeroTitle = styled.h1`
   font-size: ${({ theme }) => theme.typography.fontSize['3xl']};
   font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
-  color: ${({ theme }) => theme.colors.neutral[900]};
-  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
   
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: ${({ theme }) => theme.typography.fontSize['4xl']};
+    font-size: ${({ theme }) => theme.typography.fontSize['5xl']};
   }
 `;
 
 const HeroSubtitle = styled.p`
   font-size: ${({ theme }) => theme.typography.fontSize.lg};
-  color: ${({ theme }) => theme.colors.neutral[600]};
-  max-width: 600px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
   margin: 0 auto;
   line-height: ${({ theme }) => theme.typography.lineHeight.relaxed};
+  
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: ${({ theme }) => theme.typography.fontSize.xl};
+  }
+`;
+
+const ProductsSection = styled.section`
+  padding: 3rem 0;
 `;
 
 const SectionTitle = styled.h2`
@@ -94,17 +120,20 @@ export default function Home() {
   return (
     <PageContainer>
       <Header />
-      
-      <Main>
-        <HeroSection>
-          <HeroTitle>Soluciones financieras para tu futuro</HeroTitle>
-          <HeroSubtitle>
-            Descubre nuestra amplia gama de productos financieros diseñados para ayudarte a cumplir tus metas.
-            Desde cuentas de ahorro hasta inversiones, tenemos la solución perfecta para ti.
-          </HeroSubtitle>
+      <HeroSection>
+          <HeroBackground />
+          <HeroContent>
+            <HeroTitle>Soluciones financieras para tu futuro</HeroTitle>
+            <HeroSubtitle>
+              Descubre nuestra amplia gama de productos financieros diseñados para ayudarte a cumplir tus metas.
+              Desde cuentas de ahorro hasta inversiones, tenemos la solución perfecta para ti.
+            </HeroSubtitle>
+          </HeroContent>
         </HeroSection>
+      <Main>
+      
         
-        <section id="productos" aria-labelledby="productos-title">
+        <ProductsSection id="productos" aria-labelledby="productos-title">
           <SectionTitle id="productos-title">Nuestros Productos</SectionTitle>
           
           <CategoryFilter 
@@ -118,7 +147,7 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </ProductsGrid>
-        </section>
+        </ProductsSection>
       </Main>
       
       <Footer />
