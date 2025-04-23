@@ -259,10 +259,10 @@ export default function ProductDetail() {
       <PageContainer>
         <Main>
           <BackButton onClick={() => router.push('/')}>
-            &larr; Volver al catálogo
+            &larr; Back to home
           </BackButton>
-          <h1>Producto no encontrado</h1>
-          <p>Lo sentimos, el producto que estás buscando no existe.</p>
+          <h1>Product not found</h1>
+          <p>Sorry, the product you are looking for does not exist.</p>
         </Main>
         <Footer />
       </PageContainer>
@@ -273,7 +273,7 @@ export default function ProductDetail() {
     <PageContainer>
       <Main>
         <BackButton onClick={() => router.push('/')}>
-          &larr; Volver al catálogo
+          &larr; Back to home
         </BackButton>
         
         {product && (
@@ -361,12 +361,12 @@ export default function ProductDetail() {
                 <RiskContainer>
                   <RiskLabel>Nivel de Riesgo</RiskLabel>
                   <RiskBar>
-                    <RiskIndicator level={product.riskLevel} />
+                    <RiskIndicator level={product.riskLevel === 'Low' ? 'Bajo' : product.riskLevel === 'Medium' ? 'Medio' : 'Alto'} />
                   </RiskBar>
-                  <RiskDescription level={product.riskLevel}>
-                    <span>Bajo</span>
-                    <span>Medio</span>
-                    <span>Alto</span>
+                  <RiskDescription level={product.riskLevel === 'Low' ? 'Bajo' : product.riskLevel === 'Medium' ? 'Medio' : 'Alto'}>
+                    <span>Low</span>
+                    <span>Medium</span>
+                    <span>High</span>
                     <span>{product.riskLevel}</span>
                   </RiskDescription>
                 </RiskContainer>

@@ -58,12 +58,12 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
   return (
     <FilterContainer className={className}>
       <FilterButton
-        $active={activeCategory === 'Todos'}
-        onClick={() => onChange('Todos')}
-        aria-pressed={activeCategory === 'Todos'}
-        aria-label="Filtrar por: Todos los productos"
+        $active={activeCategory === 'All'}
+        onClick={() => onChange('All')}
+        aria-pressed={activeCategory === 'All'}
+        aria-label="Filter by: All products"
       >
-        Todos
+        All
       </FilterButton>
       
       {categories.map((category) => (
@@ -72,7 +72,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
           $active={activeCategory === category}
           onClick={() => onChange(category)}
           aria-pressed={activeCategory === category}
-          aria-label={`Filtrar por: ${category}`}
+          aria-label={`Filter by: ${category}`}
         >
           {category}
         </FilterButton>

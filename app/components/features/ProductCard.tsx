@@ -89,16 +89,16 @@ const DetailValue = styled.span`
 `;
 
 type RiskLevelProps = {
-  level: 'Bajo' | 'Medio' | 'Alto';
+  level: 'Low' | 'Medium' | 'High';
 };
 
-const getRiskColor = (level: 'Bajo' | 'Medio' | 'Alto', theme: Theme) => {
+const getRiskColor = (level: 'Low' | 'Medium' | 'High', theme: Theme) => {
   switch (level) {
-    case 'Bajo':
+    case 'Low':
       return theme.colors.success;
-    case 'Medio':
+    case 'Medium':
       return theme.colors.warning;
-    case 'Alto':
+    case 'High':
       return theme.colors.error;
     default:
       return theme.colors.neutral[500];
@@ -172,29 +172,29 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, className }) 
         <ProductDetails>
           {product.interestRate !== null && (
             <Detail>
-              <DetailLabel>Tasa de Interés</DetailLabel>
+              <DetailLabel>Interest Rate</DetailLabel>
               <DetailValue>{product.interestRate}%</DetailValue>
             </Detail>
           )}
           
           <Detail>
-            <DetailLabel>Categoría</DetailLabel>
+            <DetailLabel>Category</DetailLabel>
             <DetailValue>{product.category}</DetailValue>
           </Detail>
           
           <Detail>
-            <DetailLabel>Nivel de Riesgo</DetailLabel>
+            <DetailLabel>Risk Level</DetailLabel>
             <RiskLevel level={product.riskLevel}>{product.riskLevel}</RiskLevel>
           </Detail>
           
           <Detail>
-            <DetailLabel>Monto Mínimo</DetailLabel>
-            <DetailValue>${product.minAmount.toLocaleString('es-MX')}</DetailValue>
+            <DetailLabel>Minimum Amount</DetailLabel>
+            <DetailValue>${product.minAmount.toLocaleString('en-US')}</DetailValue>
           </Detail>
         </ProductDetails>
         
-        <ViewButton href={`/product/${product.id}`} aria-label={`Ver detalles de ${product.name}`}>
-          Ver Detalles
+        <ViewButton href={`/product/${product.id}`} aria-label={`View details of ${product.name}`}>
+          View Details
         </ViewButton>
       </CardContent>
     </Card>

@@ -50,7 +50,7 @@ const HeroBackground: React.FC<HeroBackgroundProps> = ({ className }) => {
       <ImageContainer>
         <Image
           src="/images/background-app.jpg"
-          alt="Paisaje financiero"
+          alt="Financial landscape"
           fill
           priority
           style={{

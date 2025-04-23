@@ -116,45 +116,45 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
         <Column>
           <Logo>FinTech Solutions</Logo>
           <Description>
-            Soluciones financieras innovadoras para individuos y empresas. 
-            Impulsamos tu crecimiento con tecnología de vanguardia y productos 
-            diseñados para el mundo moderno.
+            Innovative financial solutions for individuals and businesses.
+            We drive your growth with cutting-edge technology and products
+            designed for the modern world.
           </Description>
         </Column>
         
         <Column>
-          <ColumnTitle>Productos</ColumnTitle>
-          <FooterLink href="/#cuentas">Cuentas</FooterLink>
-          <FooterLink href="/#tarjetas">Tarjetas</FooterLink>
-          <FooterLink href="/#inversiones">Inversiones</FooterLink>
-          <FooterLink href="/#seguros">Seguros</FooterLink>
+          <ColumnTitle>Products</ColumnTitle>
+          <FooterLink href="/#cuentas">Accounts</FooterLink>
+          <FooterLink href="/#tarjetas">Cards</FooterLink>
+          <FooterLink href="/#inversiones">Investments</FooterLink>
+          <FooterLink href="/#seguros">Insurance</FooterLink>
         </Column>
         
         <Column>
-          <ColumnTitle>Empresa</ColumnTitle>
-          <FooterLink href="/#nosotros">Sobre nosotros</FooterLink>
-          <FooterLink href="/#equipo">Equipo</FooterLink>
-          <FooterLink href="/#carreras">Carreras</FooterLink>
+          <ColumnTitle>Company</ColumnTitle>
+          <FooterLink href="/#nosotros">About Us</FooterLink>
+          <FooterLink href="/#equipo">Team</FooterLink>
+          <FooterLink href="/#carreras">Careers</FooterLink>
           <FooterLink href="/#blog">Blog</FooterLink>
         </Column>
         
         <Column>
-          <ColumnTitle>Soporte</ColumnTitle>
-          <FooterLink href="/#contacto">Contacto</FooterLink>
-          <FooterLink href="/#ayuda">Centro de ayuda</FooterLink>
-          <FooterLink href="/#preguntas">Preguntas frecuentes</FooterLink>
-          <FooterLink href="/#sucursales">Sucursales</FooterLink>
+          <ColumnTitle>Support</ColumnTitle>
+          <FooterLink href="/#contacto">Contact</FooterLink>
+          <FooterLink href="/#ayuda">Help Center</FooterLink>
+          <FooterLink href="/#preguntas">FAQ</FooterLink>
+          <FooterLink href="/#sucursales">Branches</FooterLink>
         </Column>
       </FooterContent>
       
       <FooterBottom>
         <Copyright>
-          &copy; {currentYear} FinTech Solutions. Todos los derechos reservados.
+          &copy; {currentYear} FinTech Solutions. All rights reserved.
         </Copyright>
         
         <LegalLinks>
-          <LegalLink href="/terminos">Términos</LegalLink>
-          <LegalLink href="/privacidad">Privacidad</LegalLink>
+          <LegalLink href="/terminos">Terms</LegalLink>
+          <LegalLink href="/privacidad">Privacy</LegalLink>
           <LegalLink href="/cookies">Cookies</LegalLink>
         </LegalLinks>
       </FooterBottom>

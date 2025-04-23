@@ -3,22 +3,22 @@ import { Product } from '../types/product';
 export const products: Product[] = [
   {
     id: '1',
-    name: 'Cuenta de Ahorro Plus',
-    type: 'Cuenta',
+    name: 'Plus Savings Account',
+    type: 'Account',
     interestRate: 3.5,
-    category: 'Ahorro',
-    riskLevel: 'Bajo',
-    description: 'Cuenta de ahorro con alta rentabilidad y disponibilidad inmediata de tus fondos.',
+    category: 'Savings',
+    riskLevel: 'Low',
+    description: 'Savings account with high profitability and immediate availability of your funds.',
     benefits: [
-      'Sin comisiones de mantenimiento',
-      'Retiros ilimitados en cajeros propios',
-      'Tarjeta de débito sin costo',
-      'Transferencias gratuitas'
+      'No maintenance fees',
+      'Unlimited withdrawals at own ATMs',
+      'Free debit card',
+      'Free transfers'
     ],
     requirements: [
-      'Documento de identidad',
-      'Comprobante de domicilio',
-      'Depósito inicial de $100'
+      'ID document',
+      'Proof of address',
+      'Initial deposit of $100'
     ],
     minAmount: 100,
     maxAmount: null,
@@ -27,22 +27,22 @@ export const products: Product[] = [
   },
   {
     id: '2',
-    name: 'Tarjeta de Crédito Platinum',
-    type: 'Tarjeta',
+    name: 'Platinum Credit Card',
+    type: 'Card',
     interestRate: 18.9,
-    category: 'Crédito',
-    riskLevel: 'Medio',
-    description: 'Tarjeta de crédito con beneficios exclusivos, acumulación de puntos y descuentos en establecimientos seleccionados.',
+    category: 'Credit',
+    riskLevel: 'Medium',
+    description: 'Credit card with exclusive benefits, point accumulation, and discounts at selected establishments.',
     benefits: [
-      'Acumulación de 2 puntos por cada $1 gastado',
-      'Seguro de viaje internacional',
-      'Acceso a salas VIP en aeropuertos',
-      'Descuentos en restaurantes'
+      'Earn 2 points for every $1 spent',
+      'International travel insurance',
+      'Access to VIP lounges at airports',
+      'Restaurant discounts'
     ],
     requirements: [
-      'Ingresos mínimos de $2,500 mensuales',
-      'Historial crediticio favorable',
-      'Antigüedad laboral mínima de 1 año'
+      'Minimum income of $2,500 per month',
+      'Favorable credit history',
+      'Minimum employment tenure of 1 year'
     ],
     minAmount: 1000,
     maxAmount: 25000,
@@ -51,94 +51,94 @@ export const products: Product[] = [
   },
   {
     id: '3',
-    name: 'Fondo de Inversión Estratégico',
-    type: 'Inversión',
+    name: 'Strategic Investment Fund',
+    type: 'Investment',
     interestRate: 8.2,
-    category: 'Inversión',
-    riskLevel: 'Alto',
-    description: 'Fondo diversificado con enfoque en mercados emergentes y sectores de alto crecimiento.',
+    category: 'Investment',
+    riskLevel: 'High',
+    description: 'Diversified fund focusing on emerging markets and high-growth sectors.',
     benefits: [
-      'Diversificación automática',
-      'Gestión profesional',
-      'Rendimientos competitivos',
-      'Reportes trimestrales detallados'
+      'Automatic diversification',
+      'Professional management',
+      'Competitive returns',
+      'Detailed quarterly reports'
     ],
     requirements: [
-      'Inversión mínima de $5,000',
-      'Plazo mínimo recomendado de 3 años',
-      'Completar perfil de inversionista'
+      'Minimum investment of $5,000',
+      'Recommended minimum term of 3 years',
+      'Complete investor profile'
     ],
     minAmount: 5000,
     maxAmount: null,
-    term: '3 años (recomendado)',
+    term: '3 years (recommended)',
     image: '/images/fondo-inversion.jpg'
   },
   {
     id: '4',
-    name: 'Préstamo Personal Flexible',
-    type: 'Préstamo',
+    name: 'Flexible Personal Loan',
+    type: 'Loan',
     interestRate: 12.5,
-    category: 'Crédito',
-    riskLevel: 'Medio',
-    description: 'Préstamo personal con condiciones flexibles para cualquier proyecto o necesidad financiera.',
+    category: 'Credit',
+    riskLevel: 'Medium',
+    description: 'Personal loan with flexible conditions for any project or financial need.',
     benefits: [
-      'Aprobación en 24 horas',
-      'Sin penalización por pago anticipado',
-      'Cuotas fijas mensuales',
-      'Plazo de hasta 60 meses'
+      'Approval within 24 hours',
+      'No penalty for early repayment',
+      'Fixed monthly installments',
+      'Terms up to 60 months'
     ],
     requirements: [
-      'Ingresos mínimos de $1,500 mensuales',
-      'Historial crediticio favorable',
-      'Antigüedad laboral mínima de 6 meses'
+      'Minimum income of $1,500 per month',
+      'Favorable credit history',
+      'Minimum employment tenure of 6 months'
     ],
     minAmount: 1000,
     maxAmount: 50000,
-    term: '12-60 meses',
+    term: '12-60 months',
     image: '/images/prestamo-personal.jpg'
   },
   {
     id: '5',
-    name: 'Seguro de Vida Integral',
-    type: 'Seguro',
+    name: 'Comprehensive Life Insurance',
+    type: 'Insurance',
     interestRate: null,
-    category: 'Protección',
-    riskLevel: 'Bajo',
-    description: 'Seguro de vida con coberturas adicionales para enfermedades graves y accidentes.',
+    category: 'Protection',
+    riskLevel: 'Low',
+    description: 'Life insurance with additional coverage for serious illnesses and accidents.',
     benefits: [
-      'Indemnización por fallecimiento',
-      'Cobertura por invalidez total y permanente',
-      'Asistencia funeraria',
-      'Anticipo por enfermedades graves'
+      'Death compensation',
+      'Coverage for total and permanent disability',
+      'Funeral assistance',
+      'Advance payment for serious illnesses'
     ],
     requirements: [
-      'Edad entre 18 y 65 años',
-      'Cuestionario médico simple',
-      'Documento de identidad'
+      'Age between 18 and 65 years',
+      'Simple medical questionnaire',
+      'ID document'
     ],
     minAmount: 500,
     maxAmount: 500000,
-    term: 'Anual (renovable)',
+    term: 'Annual (renewable)',
     image: '/images/seguro-vida.jpg'
   },
   {
     id: '6',
-    name: 'Cuenta Corriente Empresarial',
-    type: 'Cuenta',
+    name: 'Business Current Account',
+    type: 'Account',
     interestRate: 0.5,
-    category: 'Ahorro',
-    riskLevel: 'Bajo',
-    description: 'Cuenta diseñada para negocios con servicios especializados y atención prioritaria.',
+    category: 'Savings',
+    riskLevel: 'Low',
+    description: 'Account designed for businesses with specialized services and priority attention.',
     benefits: [
-      'Chequera sin costo',
-      'Banca en línea para empresas',
-      'Transferencias internacionales',
-      'Tarjetas adicionales para colaboradores'
+      'Free checkbook',
+      'Online banking for businesses',
+      'International transfers',
+      'Additional cards for collaborators'
     ],
     requirements: [
-      'Documentación legal de la empresa',
-      'Estados financieros recientes',
-      'Depósito inicial de $1,000'
+      'Legal company documentation',
+      'Recent financial statements',
+      'Initial deposit of $1,000'
     ],
     minAmount: 1000,
     maxAmount: null,
@@ -147,145 +147,145 @@ export const products: Product[] = [
   },
   {
     id: '7',
-    name: 'Hipoteca Casa Feliz',
-    type: 'Hipoteca',
+    name: 'Happy Home Mortgage',
+    type: 'Mortgage',
     interestRate: 7.8,
-    category: 'Crédito',
-    riskLevel: 'Medio',
-    description: 'Financiamiento para adquisición de vivienda con las mejores tasas del mercado.',
+    category: 'Credit',
+    riskLevel: 'Medium',
+    description: 'Housing acquisition financing with the best market rates.',
     benefits: [
-      'Financiamiento de hasta el 80% del valor de la propiedad',
-      'Plazos de hasta 20 años',
-      'Tasa fija durante los primeros 5 años',
-      'Sin penalización por pagos anticipados'
+      'Financing up to 80% of the property value',
+      'Terms up to 20 years',
+      'Fixed rate for the first 5 years',
+      'No penalty for early payments'
     ],
     requirements: [
-      'Ingresos mínimos de $2,500 mensuales',
-      'Historial crediticio favorable',
-      'Enganche mínimo del 20%',
-      'Propiedad en zonas aprobadas'
+      'Minimum income of $2,500 per month',
+      'Favorable credit history',
+      'Minimum down payment of 20%',
+      'Property in approved areas'
     ],
     minAmount: 50000,
     maxAmount: 500000,
-    term: 'Hasta 20 años',
+    term: 'Up to 20 years',
     image: '/images/hipoteca.jpg'
   },
   {
     id: '8',
-    name: 'Plan de Retiro Seguro',
-    type: 'Inversión',
+    name: 'Secure Retirement Plan',
+    type: 'Investment',
     interestRate: 6.5,
-    category: 'Inversión',
-    riskLevel: 'Medio',
-    description: 'Plan de ahorro para el retiro con ventajas fiscales y rentabilidad garantizada.',
+    category: 'Investment',
+    riskLevel: 'Medium',
+    description: 'Retirement savings plan with tax advantages and guaranteed returns.',
     benefits: [
-      'Deducción de impuestos',
-      'Rentabilidad garantizada',
-      'Aportaciones flexibles',
-      'Protección contra la inflación'
+      'Tax deduction',
+      'Guaranteed returns',
+      'Flexible contributions',
+      'Protection against inflation'
     ],
     requirements: [
-      'Edad entre 18 y 60 años',
-      'Aportación mínima mensual de $100',
-      'Documento de identidad'
+      'Age between 18 and 60 years',
+      'Minimum monthly contribution of $100',
+      'ID document'
     ],
     minAmount: 100,
     maxAmount: null,
-    term: 'Hasta la jubilación',
+    term: 'Until retirement',
     image: '/images/plan-retiroSeguro.jpg'
   },
   {
     id: '9',
-    name: 'Certificado de Depósito Premium',
-    type: 'Inversión',
+    name: 'Premium Certificate of Deposit',
+    type: 'Investment',
     interestRate: 5.2,
-    category: 'Inversión',
-    riskLevel: 'Bajo',
-    description: 'Inversión a plazo fijo con excelente rentabilidad y seguridad garantizada.',
+    category: 'Investment',
+    riskLevel: 'Low',
+    description: 'Fixed-term investment with excellent profitability and guaranteed security.',
     benefits: [
-      'Tasa de interés garantizada',
-      'Capital protegido',
-      'Posibilidad de renovación automática',
-      'Certificado transferible'
+      'Guaranteed interest rate',
+      'Protected capital',
+      'Possibility of automatic renewal',
+      'Transferable certificate'
     ],
     requirements: [
-      'Inversión mínima de $1,000',
-      'Mantener el dinero durante el plazo acordado',
-      'Cuenta para recibir intereses'
+      'Minimum investment of $1,000',
+      'Keep the money during the agreed term',
+      'Account to receive interest'
     ],
     minAmount: 1000,
     maxAmount: null,
-    term: '3, 6, 12 o 18 meses',
+    term: '3, 6, 12 or 18 months',
     image: '/images/certificado-deposito.jpg'
   },
   {
     id: '10',
-    name: 'Seguro de Auto Total',
-    type: 'Seguro',
+    name: 'Total Auto Insurance',
+    type: 'Insurance',
     interestRate: null,
-    category: 'Protección',
-    riskLevel: 'Bajo',
-    description: 'Seguro para vehículos con cobertura amplia y asistencia vial 24/7.',
+    category: 'Protection',
+    riskLevel: 'Low',
+    description: 'Vehicle insurance with comprehensive coverage and 24/7 roadside assistance.',
     benefits: [
-      'Cobertura por daños materiales',
-      'Responsabilidad civil',
-      'Robo total',
-      'Asistencia vial ilimitada'
+      'Material damage coverage',
+      'Civil liability',
+      'Total theft',
+      'Unlimited roadside assistance'
     ],
     requirements: [
-      'Vehículo con antigüedad menor a 10 años',
-      'Tarjeta de circulación vigente',
-      'Licencia de conducir del titular'
+      'Vehicle less than 10 years old',
+      'Valid vehicle registration',
+      'Driver\'s license of the owner'
     ],
     minAmount: 300,
     maxAmount: null,
-    term: 'Anual',
+    term: 'Annual',
     image: '/images/seguro-auto.jpg'
   },
   {
     id: '11',
-    name: 'Crédito PyME Crecimiento',
-    type: 'Préstamo',
+    name: 'SME Growth Credit',
+    type: 'Loan',
     interestRate: 10.8,
-    category: 'Crédito',
-    riskLevel: 'Alto',
-    description: 'Financiamiento especializado para pequeñas y medianas empresas en etapa de crecimiento.',
+    category: 'Credit',
+    riskLevel: 'High',
+    description: 'Specialized financing for small and medium enterprises in growth stage.',
     benefits: [
-      'Tasas preferenciales',
-      'Asesoría financiera especializada',
-      'Periodo de gracia de 3 meses',
-      'Sin garantía hipotecaria para montos menores'
+      'Preferential rates',
+      'Specialized financial advisory',
+      'Grace period of 3 months',
+      'No mortgage guarantee for smaller amounts'
     ],
     requirements: [
-      'Negocio con 2 años mínimo de operación',
-      'Estados financieros de los últimos 2 años',
-      'Plan de inversión',
-      'Buen historial crediticio'
+      'Business with minimum 2 years of operation',
+      'Financial statements from the last 2 years',
+      'Investment plan',
+      'Good credit history'
     ],
     minAmount: 25000,
     maxAmount: 200000,
-    term: '12-60 meses',
+    term: '12-60 months',
     image: '/images/credito-pyme.jpg'
   },
   {
     id: '12',
-    name: 'Inversión en Mercado Accionario',
-    type: 'Inversión',
+    name: 'Stock Market Investment',
+    type: 'Investment',
     interestRate: null,
-    category: 'Inversión',
-    riskLevel: 'Alto',
-    description: 'Plataforma para inversión directa en acciones nacionales e internacionales con comisiones competitivas.',
+    category: 'Investment',
+    riskLevel: 'High',
+    description: 'Platform for direct investment in national and international stocks with competitive commissions.',
     benefits: [
-      'Acceso a mercados globales',
-      'Plataforma de análisis técnico avanzado',
-      'Asesoría personalizada',
-      'Comisiones reducidas por volumen'
+      'Access to global markets',
+      'Advanced technical analysis platform',
+      'Personalized advisory',
+      'Reduced commissions by volume'
     ],
     requirements: [
-      'Inversión mínima de $10,000',
-      'Perfil de inversionista completado',
-      'Conocimientos básicos de mercados de valores',
-      'Tolerancia al riesgo alta'
+      'Minimum investment of $10,000',
+      'Completed investor profile',
+      'Basic knowledge of securities markets',
+      'High risk tolerance'
     ],
     minAmount: 10000,
     maxAmount: null,
@@ -304,6 +304,6 @@ export const getCategories = (): string[] => {
 };
 
 export const getProductsByCategory = (category: string): Product[] => {
-  if (category === 'Todos') return products;
+  if (category === 'All') return products;
   return products.filter(product => product.category === category);
 }; 

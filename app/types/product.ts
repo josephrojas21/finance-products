@@ -4,7 +4,7 @@ export interface Product {
   type: string;
   interestRate: number | null;
   category: string;
-  riskLevel: 'Bajo' | 'Medio' | 'Alto';
+  riskLevel: 'Low' | 'Medium' | 'High';
   description: string;
   benefits: string[];
   requirements: string[];

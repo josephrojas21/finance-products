@@ -1,22 +1,22 @@
-# FinTech Solutions - Catálogo de Productos Financieros
+# FinTech Solutions - Financial Products Catalog
 
-Este proyecto es una landing page para una fintech ficticia que muestra un catálogo de productos financieros con detalles clave y filtros de categoría.
+This project is a landing page for a fictional fintech company that showcases a catalog of financial products with key details and category filters.
 
 ## 🚀 Demo
 
-Puedes ver la versión desplegada de este proyecto en [Vercel](https://tu-enlace-al-deploy-en-vercel).
+You can see the deployed version of this project on [Vercel](https://your-vercel-deployment-link).
 
-## 📋 Características
+## 📋 Features
 
-- Landing page con diseño y enfocado en servicios financieros
-- Catálogo de productos con filtrado por categoría
-- Páginas de detalle para cada producto con información completa
-- Diseño responsivo (Mobile First)
-- Interfaz accesible según estándares de a11y
-- Tipado estricto con TypeScript
-- Estructura modular y reutilizable
+- Landing page with design focused on financial services
+- Product catalog with category filtering
+- Detail pages for each product with complete information
+- Responsive design (Mobile First)
+- Accessible interface according to a11y standards
+- Strict typing with TypeScript
+- Modular and reusable structure
 
-## 🛠️ Tecnologías
+## 🛠️ Technologies
 
 - [Next.js](https://nextjs.org/) (App Router)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -24,93 +24,92 @@ Puedes ver la versión desplegada de este proyecto en [Vercel](https://tu-enlace
 - [Styled Components](https://styled-components.com/)
 - [Geist Font](https://vercel.com/font)
 
-## 🧰 Instalación y uso
+## 🧰 Installation and Usage
 
-1. Clona este repositorio:
+1. Clone this repository:
 ```bash
 cd finance-products
 ```
 
-2. Instala las dependencias:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Ejecuta el servidor de desarrollo:
+3. Run the development server:
 ```bash
 npm run dev
 ```
 
-4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## 📝 Decisiones técnicas
+## 📝 Technical Decisions
 
-### Criterios para el diseño de UI
+### UI Design Criteria
 
-1. **Confianza y seguridad**: Utilicé una paleta de colores basada en azules profundos (confianza), con toques de verde (prosperidad) y naranja para los CTAs, típico en el sector financiero.
+1. **Trust and Security**: I used a color palette based on deep blues (trust), with touches of green (prosperity) and orange for CTAs, typical in the financial sector.
 
-2. **Jerarquía clara**: La información se presenta en un orden lógico para facilitar la comprensión de los productos financieros complejos.
+2. **Clear Hierarchy**: Information is presented in a logical order to facilitate understanding of complex financial products.
 
-3. **Micro-interacciones**: Transiciones sutiles y efectos hover para mejorar la experiencia de usuario sin distraer.
+3. **Micro-interactions**: Subtle transitions and hover effects to enhance the user experience without distraction.
 
-4. **Accesibilidad**: Alto contraste, textos legibles y etiquetas ARIA para garantizar que todos los usuarios puedan acceder a la información.
+4. **Accessibility**: High contrast, readable text, and ARIA labels to ensure all users can access the information.
 
-5. **Responsividad**: Diseño mobile-first que se adapta a cualquier dispositivo, facilitando la consulta de productos financieros en cualquier contexto.
+5. **Responsiveness**: Mobile-first design that adapts to any device, making it easy to consult financial products in any context.
 
-### Decisión entre Tailwind y Styled Components
+### Decision Between Tailwind and Styled Components
 
-- **Tailwind CSS**: Utilizado para la estructura principal y layout base. Su enfoque utility-first permite construir rápidamente componentes con estilos consistentes y mantener un sistema de diseño coherente.
+- **Tailwind CSS**: Used for the main structure and base layout. Its utility-first approach allows for quickly building components with consistent styles and maintaining a coherent design system.
 
-- **Styled Components**: Implementado para componentes complejos y reutilizables. Me permitió:
-  - Encapsular la lógica de estilos con la de componentes
-  - Implementar theming con tipado completo
-  - Crear variantes de componentes basadas en props
-  - Facilitar la reutilización de estilos complejos
+- **Styled Components**: Implemented for complex and reusable components. It allowed me to:
+  - Encapsulate style logic with component logic
+  - Implement theming with complete typing
+  - Create component variants based on props
+  - Facilitate the reuse of complex styles
 
-Esta combinación permite aprovechar lo mejor de ambos mundos: la rapidez de desarrollo de Tailwind y la flexibilidad y mantenibilidad de Styled Components.
+This combination leverages the best of both worlds: Tailwind's rapid development and Styled Components' flexibility and maintainability.
 
-### Escalabilidad para una aplicación real
+### Scalability for a Real Application
 
-Para escalar este proyecto a una aplicación de banca digital real:
+To scale this project to a real digital banking application:
 
-1. **Arquitectura**: Implementaría una arquitectura basada en microservicios con APIs separadas para cada dominio (productos, usuarios, transacciones).
+1. **Architecture**: I would implement a microservices-based architecture with separate APIs for each domain (products, users, transactions).
 
-2. **Gestión de estado**: Añadiría React Query o SWR para manejo de caché y solicitudes al servidor, junto con un sistema de estado global como Zustand o Redux.
+2. **State Management**: I would add React Query or SWR for cache management and server requests, along with a global state system like Zustand or Redux.
 
-3. **Autenticación**: Incorporaría un sistema de autenticación robusto con NextAuth.js, soporte para 2FA y sesiones seguras.
+3. **Authentication**: I would incorporate a robust authentication system with NextAuth.js, support for 2FA, and secure sessions.
 
-4. **Internacionalización**: Implementaría i18n para soportar múltiples idiomas y formatos regionales.
+4. **Internationalization**: I would implement i18n to support multiple languages and regional formats.
 
-5. **Testing**: Ampliaría la cobertura con pruebas unitarias (Jest), de integración (Testing Library) y E2E (Cypress).
+5. **Testing**: I would expand coverage with unit tests (Jest), integration tests (Testing Library), and E2E tests (Cypress).
 
-6. **CI/CD**: Establecería pipelines de integración continua para garantizar calidad del código y despliegues automatizados.
+6. **CI/CD**: I would establish continuous integration pipelines to ensure code quality and automated deployments.
 
-7. **Monitoreo**: Añadiría sistemas de logging y monitoreo para errores y experiencia de usuario.
+7. **Monitoring**: I would add logging and monitoring systems for errors and user experience.
 
-8. **Estrcutura de folders** : La actual es basica pero iria creciendo a medida que se agreguen features y routes.
-con la nueva forma de router usando la carpeta app nos muestra una forma nuevo de orgizar todo por page o feature.
+8. **Folder Structure**: The current one is basic but would grow as features and routes are added. With the new router approach using the app folder, it shows us a new way to organize everything by page or feature.
 
-### Herramientas para rendimiento y monitoreo
+### Tools for Performance and Monitoring
 
-1. **Rendimiento**:
-   - Next.js Analytics para métricas core web vitals
-   - Lighthouse CI para auditoría automática de páginas
-   - Bundle analyzer para optimizar tamaño de paquetes JS
-   - Optimización de imágenes con next/image y formatos modernos (WebP/AVIF)
+1. **Performance**:
+   - Next.js Analytics for core web vitals metrics
+   - Lighthouse CI for automatic page auditing
+   - Bundle analyzer to optimize JS package size
+   - Image optimization with next/image and modern formats (WebP/AVIF)
 
-2. **Monitoreo de aplicación**:
-   - Sentry para monitoreo de errores en producción
-   - LogRocket para sesiones de usuario y reproducción de errores
-   - Google Analytics o Plausible para analíticas de uso
-   - New Relic o Datadog para monitoreo de rendimiento y disponibilidad
+2. **Application Monitoring**:
+   - Sentry for error monitoring in production
+   - LogRocket for user sessions and error reproduction
+   - Google Analytics or Plausible for usage analytics
+   - New Relic or Datadog for performance and availability monitoring
 
-3. **UX y A/B Testing**:
-   - Hotjar para mapas de calor y grabaciones de sesión
-   - Optimizely para pruebas A/B de features
-   - Customer.io para segmentación y comunicación con usuarios
+3. **UX and A/B Testing**:
+   - Hotjar for heat maps and session recordings
+   - Optimizely for A/B testing of features
+   - Customer.io for user segmentation and communication
 
-Con estas herramientas se podría garantizar un alto rendimiento, rápida detección de problemas y mejora continua basada en datos reales de uso.
+With these tools, high performance, quick problem detection, and continuous improvement based on real usage data could be guaranteed.
 
 ---
 
-Este proyecto fue desarrollado como parte de una prueba técnica para demostrar habilidades en desarrollo frontend con React, Next.js, TypeScript, y diseño de UIs modernas para productos financieros.
+This project was developed as part of a technical test to demonstrate skills in frontend development with React, Next.js, TypeScript, and modern UI design for financial products.

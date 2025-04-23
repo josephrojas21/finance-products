@@ -226,28 +226,28 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
       
       <Nav ref={navRef} $isOpen={isMenuOpen}>
         <NavLink href="/" $active={pathname === '/'} onClick={closeMenu}>
-          Inicio
+          Home
         </NavLink>
         <NavLink 
           href="/#productos" 
           $active={pathname === '/#productos'}
           onClick={closeMenu}
         >
-          Productos
+          Products
         </NavLink>
         <NavLink 
           href="/#nosotros" 
           $active={pathname === '/#nosotros'}
           onClick={closeMenu}
         >
-          Nosotros
+          About Us
         </NavLink>
         <NavLink 
-          href="/#contacto" 
+          href="/#contact" 
           $active={pathname === '/#contacto'}
           onClick={closeMenu}
         >
-          Contacto
+          Contact
         </NavLink>
       </Nav>
     </HeaderContainer>

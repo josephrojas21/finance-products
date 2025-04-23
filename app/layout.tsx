@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FinTech Solutions - Productos Financieros",
-  description: "Descubre nuestra gama de productos financieros diseñados para tu bienestar económico",
+  title: "FinTech Solutions - Financial Products",
+  description: "Discover our range of financial products designed for your economic well-being",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -108,10 +108,10 @@ const ProductsGrid = styled.div`
 `;
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState<string>('Todos');
+  const [activeCategory, setActiveCategory] = useState<string>('All');
   const categories = getCategories();
   
-  const filteredProducts = activeCategory === 'Todos'
+  const filteredProducts = activeCategory === 'All'
     ? products
     : products.filter(product => product.category === activeCategory);
   
@@ -120,10 +120,10 @@ export default function Home() {
       <HeroSection>
           <HeroBackground />
           <HeroContent>
-            <HeroTitle>Soluciones financieras para tu futuro</HeroTitle>
+            <HeroTitle>Financial solutions for your future</HeroTitle>
             <HeroSubtitle>
-              Descubre nuestra amplia gama de productos financieros diseñados para ayudarte a cumplir tus metas.
-              Desde cuentas de ahorro hasta inversiones, tenemos la solución perfecta para ti.
+              Discover our wide range of financial products designed to help you achieve your goals.
+              From savings accounts to investments, we have the perfect solution for you.
             </HeroSubtitle>
           </HeroContent>
         </HeroSection>
@@ -131,7 +131,7 @@ export default function Home() {
       
         
         <ProductsSection id="productos" aria-labelledby="productos-title">
-          <SectionTitle id="productos-title">Nuestros Productos</SectionTitle>
+          <SectionTitle id="productos-title">Our Products</SectionTitle>
           
           <CategoryFilter 
             categories={categories}
