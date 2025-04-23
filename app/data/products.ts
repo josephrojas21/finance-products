@@ -192,7 +192,7 @@ export const products: Product[] = [
     minAmount: 100,
     maxAmount: null,
     term: 'Hasta la jubilación',
-    image: '/images/plan-retiro.jpg'
+    image: '/images/plan-retiroSeguro.jpg'
   },
   {
     id: '9',

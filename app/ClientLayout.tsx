@@ -10,9 +10,14 @@ interface ClientLayoutProps {
 }
 
 const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
+  const enhancedTheme = {
+    ...theme,
+    _brand: 'styled-components-theme' as const
+  };
+
   return (
     <StyledComponentsRegistry>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={enhancedTheme}>
         {children}
       </ThemeProvider>
     </StyledComponentsRegistry>

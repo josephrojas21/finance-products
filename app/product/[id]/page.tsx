@@ -3,6 +3,7 @@
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import styled from 'styled-components';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { getProductById } from '../../data/products';
@@ -59,6 +60,12 @@ const ProductContainer = styled.div`
   }
 `;
 
+const ProductImageSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
 const ProductImageContainer = styled.div`
   position: relative;
   width: 100%;
@@ -111,6 +118,16 @@ const Description = styled.p`
   color: ${({ theme }) => theme.colors.neutral[700]};
   line-height: ${({ theme }) => theme.typography.lineHeight.relaxed};
   margin-bottom: 1.5rem;
+`;
+
+const InfoSectionsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const InfoSection = styled.div`
@@ -264,11 +281,44 @@ export default function ProductDetail() {
         
         {product && (
           <ProductContainer>
-            <ProductImageContainer>
-              <PlaceholderImage>
-                {product.type}
-              </PlaceholderImage>
-            </ProductImageContainer>
+            <ProductImageSection>
+              <ProductImageContainer>
+                {product.image ? (
+                  <Image 
+                    src={product.image} 
+                    alt={product.name} 
+                    fill 
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectFit: 'cover' }}
+                    priority
+                  />
+                ) : (
+                  <PlaceholderImage>
+                    {product.type}
+                  </PlaceholderImage>
+                )}
+              </ProductImageContainer>
+              
+              <InfoSectionsContainer>
+                <InfoSection>
+                  <SectionTitle>Beneficios</SectionTitle>
+                  <ListContainer>
+                    {product.benefits.map((benefit, index) => (
+                      <ListItem key={index}>{benefit}</ListItem>
+                    ))}
+                  </ListContainer>
+                </InfoSection>
+                
+                <InfoSection>
+                  <SectionTitle>Requisitos</SectionTitle>
+                  <ListContainer>
+                    {product.requirements.map((requirement, index) => (
+                      <ListItem key={index}>{requirement}</ListItem>
+                    ))}
+                  </ListContainer>
+                </InfoSection>
+              </InfoSectionsContainer>
+            </ProductImageSection>
             
             <ProductInfo>
               <ProductHeader>
@@ -323,24 +373,6 @@ export default function ProductDetail() {
                     <span>{product.riskLevel}</span>
                   </RiskDescription>
                 </RiskContainer>
-              </InfoSection>
-              
-              <InfoSection>
-                <SectionTitle>Beneficios</SectionTitle>
-                <ListContainer>
-                  {product.benefits.map((benefit, index) => (
-                    <ListItem key={index}>{benefit}</ListItem>
-                  ))}
-                </ListContainer>
-              </InfoSection>
-              
-              <InfoSection>
-                <SectionTitle>Requisitos</SectionTitle>
-                <ListContainer>
-                  {product.requirements.map((requirement, index) => (
-                    <ListItem key={index}>{requirement}</ListItem>
-                  ))}
-                </ListContainer>
               </InfoSection>
             </ProductInfo>
           </ProductContainer>
