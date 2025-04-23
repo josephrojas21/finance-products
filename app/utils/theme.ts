@@ -1,4 +1,3 @@
-// app/utils/theme.ts
 export const theme = {
   colors: {
     primary: '#0052CC',

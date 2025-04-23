@@ -8,7 +8,7 @@ Puedes ver la versión desplegada de este proyecto en [Vercel](https://tu-enlace
 
 ## 📋 Características
 
-- Landing page con diseño profesional y enfocado en servicios financieros
+- Landing page con diseño y enfocado en servicios financieros
 - Catálogo de productos con filtrado por categoría
 - Páginas de detalle para cada producto con información completa
 - Diseño responsivo (Mobile First)
@@ -28,7 +28,6 @@ Puedes ver la versión desplegada de este proyecto en [Vercel](https://tu-enlace
 
 1. Clona este repositorio:
 ```bash
-git clone https://github.com/tu-usuario/finance-products.git
 cd finance-products
 ```
 
@@ -87,6 +86,9 @@ Para escalar este proyecto a una aplicación de banca digital real:
 6. **CI/CD**: Establecería pipelines de integración continua para garantizar calidad del código y despliegues automatizados.
 
 7. **Monitoreo**: Añadiría sistemas de logging y monitoreo para errores y experiencia de usuario.
+
+8. **Estrcutura de folders** : La actual es basica pero iria creciendo a medida que se agreguen features y routes.
+con la nueva forma de router usando la carpeta app nos muestra una forma nuevo de orgizar todo por page o feature.
 
 ### Herramientas para rendimiento y monitoreo
 
