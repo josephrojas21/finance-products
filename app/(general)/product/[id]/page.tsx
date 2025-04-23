@@ -4,10 +4,9 @@ import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import styled from 'styled-components';
 import Image from 'next/image';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { getProductById } from '../../data/products';
-import { Theme } from '../../utils/styled';
+import Footer from '../../../components/layout/Footer';
+import { getProductById } from '../../../data/products';
+import { Theme } from '../../../utils/styled';
 
 const PageContainer = styled.div`
   min-height: 100vh;
@@ -15,7 +14,7 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
-const Main = styled.main`
+const Main = styled.main`ß
   flex: 1;
   padding: 1.5rem;
   max-width: 1200px;
@@ -258,7 +257,6 @@ export default function ProductDetail() {
   if (!product) {
     return (
       <PageContainer>
-        <Header />
         <Main>
           <BackButton onClick={() => router.push('/')}>
             &larr; Volver al catálogo
@@ -273,7 +271,6 @@ export default function ProductDetail() {
   
   return (
     <PageContainer>
-      <Header />
       <Main>
         <BackButton onClick={() => router.push('/')}>
           &larr; Volver al catálogo
@@ -378,7 +375,6 @@ export default function ProductDetail() {
           </ProductContainer>
         )}
       </Main>
-      <Footer />
     </PageContainer>
   );
 } 

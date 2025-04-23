@@ -4,8 +4,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Product } from '../types/product';
-import { Theme } from '../utils/styled';
+import { Product } from '../../types/product';
+import { Theme } from '../../utils/styled';
 
 const Card = styled.div`
   display: flex;

@@ -1,9 +1,9 @@
 // app/utils/theme.ts
 export const theme = {
   colors: {
-    primary: '#0052CC',       // Deep blue for trust and stability
-    secondary: '#00875A',     // Green for growth and prosperity
-    accent: '#FF5630',        // Vibrant orange for CTAs and highlights
+    primary: '#0052CC',
+    secondary: '#00875A',     
+    accent: '#FF5630',        
     neutral: {
       100: '#FFFFFF',
       200: '#F4F5F7',

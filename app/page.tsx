@@ -2,9 +2,7 @@
 
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ProductCard from './components/ProductCard';
+import ProductCard from './components/features/ProductCard';
 import CategoryFilter from './components/CategoryFilter';
 import HeroBackground from './components/HeroBackground';
 import { products, getCategories } from './data/products';
@@ -12,7 +10,7 @@ import { products, getCategories } from './data/products';
 const PageContainer = styled.div`
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;ß
 `;
 
 const Main = styled.main`
@@ -119,7 +117,6 @@ export default function Home() {
   
   return (
     <PageContainer>
-      <Header />
       <HeroSection>
           <HeroBackground />
           <HeroContent>
@@ -149,8 +146,6 @@ export default function Home() {
           </ProductsGrid>
         </ProductsSection>
       </Main>
-      
-      <Footer />
     </PageContainer>
   );
 }
